@@ -30,16 +30,17 @@ SECRET PHRASE (must appear on the app page): ISOM5160-HW2-SMS
 # Student ID: 21329681
 #
 # GenAI acknowledgment (required if you used GenAI; otherwise write "None"):
-#   - Tools used: Qoder (AI coding assistant)
+#   - Tools used: Qoder--GLM-5.4 (AI coding assistant)
 #   - How you used them: Used it to help complete classify_text,
 #     compute_accuracy and the marked parts of main() on top of the starter
-#     file.
+#     file, and to help draft the wording of Q1 and Q2.
 #
 # Q1. Who is the primary business user of this app?
 #     (one short sentence; e.g., an employee or a security analyst reviewing
 #      inbound SMS for spam or scam-like messages)
-#   YOUR_ANSWER:
-#   TODO (fill in before submission): one short sentence naming the business user.
+#   A security analyst on an enterprise IT security team who monitors
+#   phishing and scam messages and triages suspicious SMS reported by
+#   employees.
 #
 # Q2. Look at the accuracy from your 100-sample test. Is accuracy enough
 #     for a business to rely on this app, and why or why not?
@@ -47,10 +48,17 @@ SECRET PHRASE (must appear on the app page): ISOM5160-HW2-SMS
 #     YOUR app run. Comment on the cost of a false positive (blocking a
 #     legitimate SMS, such as a bank or one-time code message) versus a
 #     false negative (missing a spam or scam-like message).
-#   YOUR_ANSWER:
-#   TODO (fill in after running the 100-sample test): cite the accuracy you
-#   actually got (e.g. "0.97 (97/100)"), then compare false-positive cost
-#   vs false-negative cost in 2–4 short sentences.
+#   The 100-sample test in my app run gave an accuracy of 0.9900 (99/100),
+#   which is high for a teaching demo but not enough for a security team to
+#   rely on it fully, because 1 error in 100 scales up to many
+#   misclassified messages if an enterprise screens thousands of SMS a day.
+#   A false negative (letting a scam or phishing SMS through as legitimate)
+#   is the costlier error, since an employee may lose money or hand over
+#   credentials, while a false positive (flagging a legitimate bank alert
+#   or one-time code as spam) mainly costs analyst review time and delays a
+#   genuine message. So the app is better used as a first-pass filter that
+#   flags suspicious messages for the analyst to review, not as an
+#   automatic blocker.
 #
 # =============================================================================
 
